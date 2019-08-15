@@ -9,49 +9,49 @@
 
 function daysPosition(day, offset) {
     switch (day) {
-        case "Sunday":
+        case "sunday":
             if (offset) {
                 return 7
             } else {
                 return 1
             }
             break;
-        case "Monday":
+        case "monday":
             if (offset) {
                 return 1
             } else {
                 return 2
             }
             break;
-        case "Tuesday":
+        case "tuesday":
             if (offset) {
                 return 2
             } else {
                 return 3
             }
             break;
-        case "Wednesday":
+        case "wednesday":
             if (offset) {
                 return 3
             } else {
                 return 4
             }
             break;
-        case "Thursday":
+        case "thursday":
             if (offset) {
                 return 4
             } else {
                 return 5
             }
             break;
-        case "Friday":
+        case "friday":
             if (offset) {
                 return 5
             } else {
                 return 6
             }
             break;
-        case "Saturday":
+        case "saturday":
             if (offset) {
                 return 6
             } else {
@@ -59,39 +59,11 @@ function daysPosition(day, offset) {
             }
             break;
         default:
-            console.log("Something went horribly wrong...");
+            return "That's not a day of the week"
             break;
     }
 }
 
-
-
-// switch (daysPosition) {
-//     case "Sunday":
-//         return 1;
-//         break;
-//     case "Monday":
-//         return 2;
-//         break;
-//     case "Tuesday":
-//         return 3;
-//         break;
-//     case "Wednesday":
-//         return 4;
-//         break;
-//     case "Thursday":
-//         return 5;
-//         break;
-//     case "Friday":
-//         return 6;
-//         break;
-//     case "Saturday":
-//         return 7;
-//         break;
-//     default:
-//         console.log("Something went horribly wrong...");
-//         break;
-// }
 
 // --------------------------------------------
 
@@ -109,7 +81,30 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-
+    let difference = score - par
+    switch (difference) {
+        case 0:
+            return "Par"
+            break;
+        case 1:
+            return "Bogie"
+            break;
+        case 2:
+            return "Double Bogie"
+            break;
+        case -1:
+            return "Birdie"
+            break;
+        case -2:
+            return "Eagle"
+            break;
+        case -3:
+            return score + "Ace"
+            break;
+        default:
+            return "ouch"
+            break;
+    }
 }
 
 
